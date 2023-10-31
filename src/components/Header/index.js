@@ -17,16 +17,20 @@ import { cx } from "@/src/utils";
 const Header = () => {
   const [mode, setMode] = useThemeSwitch();
   const [click, setClick] = useState(false);
+  const [isInputVisible, setInputVisible] = useState(false);
 
   const toggle = () => {
     setClick(!click);
   };
   return (
-    <header className='w-full p-4  px-5 sm:px-10 flex items-center justify-between'>
+    <header
+      className='w-full p-4  px-5 md:px-10 flex items-center justify-between'
+      style={{ borderBottom: "1px solid #FF3D5A" }}
+    >
       <Logo />
 
       <button
-        className='inline-block sm:hidden z-50'
+        className='inline-block md:hidden z-50'
         onClick={toggle}
         aria-label='Hamburger Menu'
       >
@@ -65,7 +69,7 @@ const Header = () => {
       </button>
 
       <nav
-        className='w-max py-3 px-6 sm:px-8 border border-solid border-dark rounded-full font-medium capitalize  items-center flex  sm:hidden
+        className='w-max py-3 px-6 md:px-8 border border-solid border-dark rounded-full font-medium capitalize  items-center flex  md:hidden
         fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50
         transition-all ease duration-300
         '
@@ -99,8 +103,8 @@ const Header = () => {
       </nav>
 
       <nav
-        className=' w-max py-3 px-8 border border-solid border-dark rounded-full font-medium capitalize  items-center hidden sm:flex
-        fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50'
+        className=' w-max py-3 px-8 border border-solid border-dark rounded-full font-medium capitalize  items-center hidden md:flex
+        fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-md z-50'
       >
         <Link href='/' className='mr-2'>
           Home
@@ -121,7 +125,7 @@ const Header = () => {
                 }
             </button> */}
       </nav>
-      <div className=' hidden sm:flex items-center'>
+      <div className=' hidden md:flex items-center'>
         <a
           href={siteMetadata.twitter}
           className='inline-block w-6 h-6 mr-4'
@@ -143,6 +147,16 @@ const Header = () => {
           style={{ cursor: "pointer" }}
         >
           <SearchIcon className='hover:scale-125 transition-all ease duration-200' />
+        </div>
+        <div className='inline-block h-6 mr-4'>
+          <button class='outline outline-offset-2 outline-1 text-light px-2 rounded'>
+            Login
+          </button>
+        </div>
+        <div className='inline-block h-6 mr-4'>
+          <button class='outline outline-offset-2 outline-1 text-light px-2 rounded'>
+            Subcribe
+          </button>
         </div>
       </div>
     </header>
