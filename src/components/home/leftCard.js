@@ -9,7 +9,7 @@ export default function LeftCard() {
         <img src='/dev/sample.jpg' style={{ borderRadius: "4px" }} />
         <div className='mt-3'>
           <h5 className='text-lg font-bold'>Image title</h5>
-          <p className='pt-1 '>
+          <p className='pt-1' style={{ color: "rgb(136, 146, 176)" }}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </p>
           <input
@@ -29,6 +29,26 @@ export default function LeftCard() {
           className='mt-2'
           style={{ borderRadius: "4px" }}
         />
+      </Card>
+
+      {/* amazon store card */}
+      <Card className='p-4 mt-5'>
+        <h5 className='text-lg font-bold'>Popular</h5>
+        <div className='flex gap-2 mt-2'>
+          <div className=''>
+            <img
+              src='/dev/product.png'
+              className='mt-2'
+              style={{ borderRadius: "4px", width: "40px", height: "40px" }}
+            />
+          </div>
+          <div className='flex-1 pt-1'>
+            <h5 className='text-base font-bold'>consectetur amet</h5>
+            <p className='text-xs' style={{ color: "rgb(136, 146, 176)" }}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
       </Card>
     </div>
   );
