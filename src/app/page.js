@@ -11,7 +11,7 @@ export default function Home() {
       <div className='lg:col-span-7 col-span-full'>
         <CenterArea />
       </div>
-      <div className='lg:col-span-3 col-span-full border border-solid border-light'>
+      <div className='lg:col-span-3 col-span-full'>
         <RightArea />
       </div>
     </div>
