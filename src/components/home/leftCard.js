@@ -2,6 +2,18 @@ import React from "react";
 import Card from "./card";
 
 export default function LeftCard() {
+  const products = [
+    {
+      image: "/dev/product.png",
+      title: "consectetur amet",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    },
+    {
+      image: "/dev/product.png",
+      title: "consectetur amet",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    },
+  ];
   return (
     <div className='flex flex-col '>
       {/* card1 */}
@@ -34,21 +46,23 @@ export default function LeftCard() {
       {/* amazon store card */}
       <Card className='p-4 mt-5'>
         <h5 className='text-lg font-bold'>Popular</h5>
-        <div className='flex gap-2 mt-2'>
-          <div className=''>
-            <img
-              src='/dev/product.png'
-              className='mt-2'
-              style={{ borderRadius: "4px", width: "40px", height: "40px" }}
-            />
+        {products.map((p, i) => (
+          <div key={i} className='flex gap-2 mt-2'>
+            <div className=''>
+              <img
+                src={p.image}
+                className='mt-2'
+                style={{ borderRadius: "4px", width: "40px", height: "40px" }}
+              />
+            </div>
+            <div className='flex-1 pt-1'>
+              <h5 className='text-base font-bold'>{p.title}</h5>
+              <p className='text-xs' style={{ color: "rgb(136, 146, 176)" }}>
+                {p.description}
+              </p>
+            </div>
           </div>
-          <div className='flex-1 pt-1'>
-            <h5 className='text-base font-bold'>consectetur amet</h5>
-            <p className='text-xs' style={{ color: "rgb(136, 146, 176)" }}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </p>
-          </div>
-        </div>
+        ))}
       </Card>
     </div>
   );

@@ -1,4 +1,6 @@
 import LeftCard from "../components/home/leftCard";
+import CenterArea from "../components/home/centerArea";
+import RightArea from "../components/home/rightArea";
 
 export default function Home() {
   return (
@@ -6,8 +8,12 @@ export default function Home() {
       <div className='col-span-2 hidden lg:block'>
         <LeftCard />
       </div>
-      <div className='lg:col-span-7 col-span-full border border-solid border-red'></div>
-      <div className='lg:col-span-3 col-span-full border border-solid border-light'></div>
+      <div className='lg:col-span-7 col-span-full'>
+        <CenterArea />
+      </div>
+      <div className='lg:col-span-3 col-span-full border border-solid border-light'>
+        <RightArea />
+      </div>
     </div>
   );
 }
