@@ -1,8 +1,9 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Card from "./card";
 import Channel from "./channel";
 
-const channels = [
+const sampleChannels = [
   {
     name: "Wall Street Journal",
     publishedAt: "2023-01-14T15:17:25.549+00:00",
@@ -38,6 +39,44 @@ const channels = [
         title: "consectetur adipiscing elit.",
         author: "Men Salomon, American Times",
       },
+
+      {
+        title: "Donec faucibus non velit id ultrices.",
+        author: "John White, Al-Jazeera",
+      },
+    ],
+  },
+  {
+    name: "Al Jazeera",
+    publishedAt: "2023-01-14T15:17:25.549+00:00",
+    articles: [
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        author: "John Solomon, JTN",
+      },
+      {
+        title: "consectetur adipiscing elit.",
+        author: "Men Salomon, American Times",
+      },
+      {
+        title:
+          "Nulla ut justo id libero placerat lacinia scelerisque ac turpis.",
+        author: "John Black, NY Times",
+      },
+      {
+        title: "Donec faucibus non velit id ultrices.",
+        author: "John White, Al-Jazeera",
+      },
+    ],
+  },
+  {
+    name: "Yahoo",
+    publishedAt: "2023-01-14T15:17:25.549+00:00",
+    articles: [
+      {
+        title: "consectetur adipiscing elit.",
+        author: "Men Salomon, American Times",
+      },
       {
         title:
           "Nulla ut justo id libero placerat lacinia scelerisque ac turpis.",
@@ -57,12 +96,19 @@ const videos = [
   "https://www.youtube.com/embed/XYn5t0tuuAk?si=8kJ2LQLsZJ5qPDPO",
 ];
 export default function centerArea() {
+  const [channels, setChannels] = useState(sampleChannels.slice(0, 2));
   return (
     <div className='flex flex-col'>
       {/* articles */}
       <div>
         {channels.map((item, i) => (
-          <Channel key={i} channel={item} />
+          <Channel
+            key={i}
+            index={i}
+            channel={item}
+            allChannels={sampleChannels}
+            setChannels={setChannels}
+          />
         ))}
       </div>
       {/* videos */}

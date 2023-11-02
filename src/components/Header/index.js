@@ -103,16 +103,16 @@ const Header = () => {
       </nav>
 
       <nav
-        className=' w-max py-3 px-8 border border-solid border-dark rounded-full font-medium capitalize  items-center hidden md:flex
-         top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-md z-50'
+        className=' w-max py-3 px-8 font-medium capitalize  items-center hidden md:flex
+         top-6   text-light  z-50'
       >
-        <Link href='/' className='mr-2'>
+        <Link href='/' className='mr-2 lg:mr-8'>
           Home
         </Link>
-        <Link href='/about' className='mx-2'>
+        <Link href='/about' className='mx-2 lg:mx-8'>
           About
         </Link>
-        <Link href='/contact' className='mx-2'>
+        <Link href='/contact' className='mx-2 lg:mx-8'>
           Contact
         </Link>
         {/* <button onClick={() => setMode(mode === "light" ? "dark" : "light")  }
