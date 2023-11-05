@@ -114,7 +114,7 @@ export default function centerArea() {
       {/* videos */}
       <div className='mt-4 mb-4' style={{ borderTop: "1px solid #43464D" }}>
         <div className='grid grid-cols-3 gap-3 mt-4 '>
-          {videos.map((item) => (
+          {videos.map((item, i) => (
             <div
               style={{
                 position: "relative",
@@ -122,6 +122,7 @@ export default function centerArea() {
                 height: 0,
                 overflow: "hidden",
               }}
+              key={i}
             >
               <iframe
                 src={item}

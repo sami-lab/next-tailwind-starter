@@ -11,7 +11,7 @@ function Accordion({ index, channel, allChannels, setChannels }) {
   };
 
   return (
-    <div className='bg-gray-100 p-4 mb-4'>
+    <div className='bg-gray-100 p-4 mb-4' key={index}>
       <div className='flex items-center gap-4'>
         <h2 className='text-3xl text-light font-bold '>{name}</h2>
         <div className='w-6 h-6 mr-2 text-light relative inline-block'>
@@ -25,9 +25,9 @@ function Accordion({ index, channel, allChannels, setChannels }) {
             onClick={toggleMenu}
           >
             <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              stroke-width='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth='2'
               d='M19 9l-7 7-7-7'
             />
           </svg>
@@ -65,7 +65,7 @@ function Accordion({ index, channel, allChannels, setChannels }) {
       <div className='mt-2' style={{ borderTop: "1px solid #43464D" }}>
         {/* Description or content */}
         {articles.map((item, i) => (
-          <div className='flex items-end gap-2 mt-3'>
+          <div className='flex items-end gap-2 mt-3' key={i}>
             <p className='text-md  text-light font-bold'> {item.title} </p>
             <p className='text-sm ' style={{ color: "rgb(136, 146, 176)" }}>
               {" "}

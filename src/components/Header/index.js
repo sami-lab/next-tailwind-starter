@@ -149,12 +149,12 @@ const Header = () => {
           <SearchIcon className='hover:scale-125 transition-all ease duration-200' />
         </div>
         <div className='inline-block h-6 mr-4'>
-          <button class='outline outline-offset-2 outline-1 text-light px-2 rounded'>
+          <button className='outline outline-offset-2 outline-1 text-light px-2 rounded'>
             Login
           </button>
         </div>
         <div className='inline-block h-6 mr-4'>
-          <button class='outline outline-offset-2 outline-1 text-light px-2 rounded'>
+          <button className='outline outline-offset-2 outline-1 text-light px-2 rounded'>
             Subcribe
           </button>
         </div>

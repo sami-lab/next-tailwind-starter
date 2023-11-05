@@ -4,7 +4,7 @@ import Card from "./card";
 
 function PriceItem({ index, item, price }) {
   return (
-    <div className=''>
+    <div className='' key={index}>
       <div
         className='flex justify-between gap-1 p-4'
         style={{ borderLeft: index % 3 === 0 ? 0 : "1px solid #43464D" }}
